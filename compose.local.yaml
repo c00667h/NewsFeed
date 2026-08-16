@@ -1,0 +1,31 @@
+# 僅供 IntelliJ 在 Mac 本機直接啟動 backend 時使用。
+# 將原本只在 Docker network 內可見的服務 port 公開到 localhost。
+services:
+  postgres:
+    ports:
+      - "5433:5432"
+  redis:
+    ports:
+      - "6380:6379"
+  rabbitmq:
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  adminer:
+    ports:
+      - "8081:8080"
+  redisinsight:
+    ports:
+      - "5540:5540"
+
+# 沿用原本 newsfeed-demo project 的本機資料，不影響既有帳號與貼文。
+volumes:
+  postgres_data:
+    name: newsfeed-demo_postgres_data
+    external: true
+  redis_data:
+    name: newsfeed-demo_redis_data
+    external: true
+  redisinsight_data:
+    name: newsfeed-demo_redisinsight_data
+    external: true

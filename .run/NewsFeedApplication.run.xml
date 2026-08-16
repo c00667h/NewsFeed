@@ -1,0 +1,25 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false"
+                 name="NewsFeedApplication"
+                 type="SpringBootApplicationConfigurationType"
+                 factoryName="Spring Boot">
+    <option name="ALTERNATIVE_JRE_PATH" value="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <!-- 停用 Netty 4.1 的 Unsafe 快速路徑，改用相容實作以避免已淘汰 API。 -->
+    <option name="VM_PARAMETERS" value="-Dio.netty.noUnsafe=true" />
+    <envs>
+      <env name="SPRING_DATASOURCE_URL" value="jdbc:postgresql://localhost:5433/newsfeed" />
+      <env name="SPRING_DATA_REDIS_HOST" value="localhost" />
+      <env name="SPRING_DATA_REDIS_PORT" value="6380" />
+      <env name="SPRING_RABBITMQ_HOST" value="localhost" />
+      <env name="SPRING_RABBITMQ_PORT" value="5672" />
+      <env name="SERVER_PORT" value="8082" />
+    </envs>
+    <module name="newsfeed-api" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="tw.readingclub.newsfeed.NewsFeedApplication" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/backend" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

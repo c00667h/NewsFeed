@@ -1,0 +1,21 @@
+# 給朋友使用的獨立 Docker 環境：所有 port 都避開 local 環境，資料 volume 也獨立。
+services:
+  postgres:
+    ports:
+      - "5434:5432"
+  redis:
+    ports:
+      - "6381:6379"
+  rabbitmq:
+    ports:
+      - "5673:5672"
+      - "15673:15672"
+  frontend:
+    ports:
+      - "8088:80"
+  adminer:
+    ports:
+      - "8083:8080"
+  redisinsight:
+    ports:
+      - "5541:5540"

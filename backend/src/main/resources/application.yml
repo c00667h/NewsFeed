@@ -1,0 +1,24 @@
+spring:
+  application.name: newsfeed-api
+
+  # IntelliJ 以 backend 為工作目錄時，從專案根目錄的已忽略 .env 載入本機 secret。
+  config.import: optional:file:../.env[.properties]
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/newsfeed}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+
+  jpa.hibernate.ddl-auto: validate
+
+  flyway.enabled: true
+
+  data.redis.host: ${SPRING_DATA_REDIS_HOST:localhost}
+  rabbitmq.host: ${SPRING_RABBITMQ_HOST:localhost}
+  rabbitmq.username: ${RABBITMQ_USER}
+  rabbitmq.password: ${RABBITMQ_PASSWORD}
+
+management.endpoints.web.exposure.include: health,info
+
+# JWT secret 僅能由 .env 或部署平台的環境變數提供，不能在 Git 內設定預設值。
+app.jwt.secret: ${JWT_SECRET}
