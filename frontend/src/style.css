@@ -1,0 +1,123 @@
+:root {
+  font-family: ui-sans-serif, system-ui, 'Noto Sans TC', sans-serif;
+  color: #162033;
+  background: #f5f7fb;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 760px;
+  margin: auto;
+  padding: 48px 24px;
+}
+.hero {
+  padding: 44px 0;
+}
+.hero p,
+header p {
+  color: #2476e8;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+}
+.hero h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+.hero span {
+  color: #667085;
+}
+.auth,
+.composer,
+article {
+  background: #fff;
+  border: 1px solid #e4e7ec;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px #1018280a;
+}
+.tabs {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+.tabs button,
+header button {
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+.tabs .on {
+  color: #2476e8;
+  font-weight: 700;
+  border-bottom: 2px solid #2476e8;
+}
+form {
+  display: grid;
+  gap: 12px;
+}
+input,
+textarea {
+  font: inherit;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  padding: 12px;
+}
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.primary {
+  background: #2476e8;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+header h1 {
+  margin: 0;
+}
+.feed {
+  margin-top: 30px;
+}
+.feed h2 {
+  font-size: 20px;
+}
+article {
+  margin: 12px 0;
+}
+article time {
+  float: right;
+  color: #667085;
+  font-size: 12px;
+}
+article p {
+  white-space: pre-wrap;
+  line-height: 1.7;
+}
+.empty,
+.error {
+  color: #b42318;
+}
+.error {
+  margin-top: 14px;
+}
